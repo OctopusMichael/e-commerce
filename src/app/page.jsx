@@ -17,13 +17,16 @@ export default function Home() {
 
   return (
     <>
-      <header>
+     
+
+      <header >
         <Navbar addCart={addCart} setAddCart={setAddCart} />
       </header>
-      <main >
+      <main  >
         <Content setAddCart={setAddCart} openModal={openModal} toggleModal={toggleModal}  /> 
        
       </main>
+     
 
     </>
   );

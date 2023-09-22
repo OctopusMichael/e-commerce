@@ -7,15 +7,15 @@ import plus from "../images/icon-plus.svg";
 import minus from "../images/icon-minus.svg";
 import Modal from "./Modal";
 
+const slider = [
+  "./images/image-product-1.jpg",
+  "./images/image-product-2.jpg",
+  "./images/image-product-3.jpg",
+  "./images/image-product-4.jpg",
+];
+
 const Content = ({ setAddCart, openModal, toggleModal }) => {
   const [counter, setCounter] = useState(0);
-
-  const slider = [
-    "./images/image-product-1.jpg",
-    "./images/image-product-2.jpg",
-    "./images/image-product-3.jpg",
-    "./images/image-product-4.jpg",
-  ];
 
   const increment = () => {
     setCounter((prevState) => prevState + 1);
@@ -29,16 +29,18 @@ const Content = ({ setAddCart, openModal, toggleModal }) => {
   };
 
   return (
-    <section className="z-0 flex flex-col  items-center  xl:flex-row   mt-[-10px]   lg:mt-[100px]  md:my-container  ">
+    <section className="z-0 flex flex-col  items-center  xl:flex-row   mt-[-10px]   lg:mt-[100px]  md:my-container   ">
       <Carousel>
         {slider.map((element, index) => (
           <Image
             className="w-full h-full rounded-xl"
             width={1440}
-            height={10000}
+            height={1000}
             src={element}
             onClick={openModal}
             key={index}
+            alt="test"
+            priority="true"
           />
         ))}
       </Carousel>

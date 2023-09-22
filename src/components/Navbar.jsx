@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState} from "react";
 
 import Image from "next/image";
 import logo from "../images/logo.svg";
@@ -18,15 +18,20 @@ const Navbar = ({ addCart, setAddCart }) => {
   const handleClick = () => {
     setToggle(!toggle);
     setCartToggle(false);
+    if (toggle == true) {
+      document.body.classList.remove("overflow-hidden");
+    } else {
+      document.body.classList.add("overflow-hidden");
+    }
   };
 
   const handleCartToggle = () => {
     setCartToggle(!cartToggle);
   };
 
-  const handleDelete = () =>{
-    setAddCart(0)
-  }
+  const handleDelete = () => {
+    setAddCart(0);
+  };
 
   return (
     <>
@@ -39,25 +44,24 @@ const Navbar = ({ addCart, setAddCart }) => {
             <a className="" href="#">
               <Image clasname="w-auto h-full" src={logo} alt="img" />
             </a>
-          
+
             <ul className=" hidden xl:ms-[50px]  md:flex flex-row md:gap-4 xl:gap-9 ">
-                <li className="">
-                  <a href="#"> Collection </a>
-                </li>
-                <li>
-                  <a href="#">Men</a>
-                </li>
-                <li>
-                  <a href="#"> Women</a>
-                </li>
-                <li>
-                  <a href="#"> About</a>
-                </li>
-                <li>
-                  <a href="#"> Contact</a>
-                </li>
-              </ul>
-           
+              <li className="">
+                <a href="#"> Collection </a>
+              </li>
+              <li>
+                <a href="#">Men</a>
+              </li>
+              <li>
+                <a href="#"> Women</a>
+              </li>
+              <li>
+                <a href="#"> About</a>
+              </li>
+              <li>
+                <a href="#"> Contact</a>
+              </li>
+            </ul>
           </div>
           <div className="flex flex-row gap-5 xl:gap-10 items-center ">
             <div className="relative">
@@ -73,7 +77,11 @@ const Navbar = ({ addCart, setAddCart }) => {
                 alt="img"
               />
             </div>
-            <Image className="w-[25px] h-[25px] md:w-[40px] md:h-[40px]   " src={user} alt="img" />
+            <Image
+              className="w-[25px] h-[25px] md:w-[40px] md:h-[40px]   "
+              src={user}
+              alt="img"
+            />
           </div>
           <div
             className={` ${
@@ -82,10 +90,10 @@ const Navbar = ({ addCart, setAddCart }) => {
           >
             <div className="bg-white h-[100vh] w-[60vw] px-[30px] py-[30px]">
               <button onClick={handleClick} className="">
-                <Image src={close} alt="close "/>
+                <Image src={close} alt="close" />
               </button>
 
-              <ul className="flex flex-col gap-2 font-bold">
+              <ul className="flex flex-col gap-3 font-bold">
                 <li className="mt-[50px]">
                   <a href="#"> Collection </a>
                 </li>
@@ -117,9 +125,12 @@ const Navbar = ({ addCart, setAddCart }) => {
                         src={thumbnail}
                         alt="thumbnail"
                       />
-                      <p> Fall Limited Edition Sneakers <br />  
-                      $125.00 x {addCart} = <span className="font-bold"> ${addCart* 125}.00</span> 
-                         </p>
+                      <p>
+                        {" "}
+                        Fall Limited Edition Sneakers <br />
+                        $125.00 x {addCart} ={" "}
+                        <span className="font-bold"> ${addCart * 125}.00</span>
+                      </p>
                       <Image
                         onClick={handleDelete}
                         className="w-[15px] h-[15px]"
@@ -127,17 +138,16 @@ const Navbar = ({ addCart, setAddCart }) => {
                         alt="delet"
                       />
                     </div>
-                    <button  className="text-white bg-orange rounded-lg h-[40px] hover:bg-hoverOrange">
+                    <button className="text-white bg-orange rounded-lg h-[40px] hover:bg-hoverOrange">
                       CheckOut
                     </button>
                   </div>
                 ) : (
-                 <div>
-                  <h1 className="text-darkGray font-bold flex justify-center items-center h-[150px] ">
-                    Your cart is empty
-                  </h1>
+                  <div>
+                    <h1 className="text-darkGray font-bold flex justify-center items-center h-[150px] ">
+                      Your cart is empty
+                    </h1>
                   </div>
-                    
                 )}
               </div>
             </div>
@@ -155,9 +165,12 @@ const Navbar = ({ addCart, setAddCart }) => {
                         src={thumbnail}
                         alt="thumbnail"
                       />
-                      <p> Fall Limited Edition Sneakers <br />  
-                      $125.00 x {addCart} = <span className="font-bold"> ${addCart* 125}.00</span> 
-                         </p>
+                      <p>
+                        {" "}
+                        Fall Limited Edition Sneakers <br />
+                        $125.00 x {addCart} ={" "}
+                        <span className="font-bold"> ${addCart * 125}.00</span>
+                      </p>
                       <Image
                         onClick={handleDelete}
                         className="w-[15px] h-[15px]"
@@ -165,17 +178,16 @@ const Navbar = ({ addCart, setAddCart }) => {
                         alt="delet"
                       />
                     </div>
-                    <button  className="text-white bg-orange rounded-lg h-[40px] hover:bg-hoverOrange">
+                    <button className="text-white bg-orange rounded-lg h-[40px] hover:bg-hoverOrange">
                       CheckOut
                     </button>
                   </div>
                 ) : (
-                 <div>
-                  <h1 className="text-darkGray font-bold flex justify-center items-center h-[150px] ">
-                    Your cart is empty
-                  </h1>
+                  <div>
+                    <h1 className="text-darkGray font-bold flex justify-center items-center h-[150px] ">
+                      Your cart is empty
+                    </h1>
                   </div>
-                    
                 )}
               </div>
             </div>
