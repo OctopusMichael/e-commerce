@@ -63,7 +63,7 @@ const Content = ({ setAddCart, openModal, toggleModal }) => {
             </h2>
           </div>
           <div>
-            <h1 className="text-darkGray line-throug  md:text-[20px]">
+            <h1 className="text-darkGray line-through  md:text-[20px]">
               $250.00
             </h1>
           </div>
