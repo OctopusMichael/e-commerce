@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+  .my-container {
+    @apply  max-w-[1440px] mx-auto px-[30px] md:px-[150px] xl:px-[160px]
+  }
+}
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+ul li a:hover{
+  color: gray;
+  color: hsla(39, 100%, 67%, 0.918);
+}
+/* .hr{
+  background: red;
+  height: 1px;
+
+} */
