@@ -36,7 +36,7 @@ const Content = ({ setAddCart, openModal, toggleModal }) => {
             className="w-full h-full rounded-xl"
             width={1440}
             height={10000}
-            src={element}.
+            src={element}
             onClick={openModal}
             key={index}
           />
