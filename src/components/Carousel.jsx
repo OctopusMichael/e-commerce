@@ -16,11 +16,11 @@ const Carousel = ({ children: slider }) => {
   const [current, setCurrent] = useState(0);
 
   const prev = () => {
-    setCurrent((current) => (current === 0 ? 0 : current - 1));
+    setCurrent((current) => (current === 0 ? slider.length - 1 : current - 1));
   };
   const next = () => {
     setCurrent((current) =>
-      current === slider.length - 1 ? slider.length - 1 : current + 1
+      current === slider.length - 1 ? 0 : current + 1
     );
   };
 
