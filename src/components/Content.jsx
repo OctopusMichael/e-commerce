@@ -11,10 +11,10 @@ const Content = ({ setAddCart, openModal, toggleModal }) => {
   const [counter, setCounter] = useState(0);
 
   const slider = [
-    "/images/image-product-1.jpg",
-    "/images/image-product-2.jpg",
-    "/images/image-product-3.jpg",
-    "/images/image-product-4.jpg",
+    "./images/image-product-1.jpg",
+    "./images/image-product-2.jpg",
+    "./images/image-product-3.jpg",
+    "./images/image-product-4.jpg",
   ];
 
   const increment = () => {
@@ -36,8 +36,7 @@ const Content = ({ setAddCart, openModal, toggleModal }) => {
             className="w-full h-full rounded-xl"
             width={1440}
             height={10000}
-            src={element}
-            alt="test"
+            src={element}.
             onClick={openModal}
             key={index}
           />
